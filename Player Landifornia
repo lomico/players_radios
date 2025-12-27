@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Landifornia Radio - Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    :root {
+      --bg: #050816;
+      --card-bg: #0b1120;
+      --accent: #ff7a1a;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000000 100%);
+      color: var(--text);
+    }
+
+    .shell {
+      width: 100%;
+      max-width: 380px;
+      background: radial-gradient(circle at top left, #111827 0, #020617 55%);
+      border-radius: 18px;
+      padding: 16px 18px 18px;
+      box-shadow:
+        0 18px 40px rgba(0,0,0,0.65),
+        0 0 0 1px rgba(148,163,184,0.25);
+      border: 1px solid rgba(249,115,22,0.18);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .title-block {
+      min-width: 0;
+    }
+
+    .brand {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .tagline {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .badge {
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      white-space: nowrap;
+    }
+
+    .rcast-wrapper {
+      width: 100%;
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .rcast-wrapper iframe {
+      border-radius: 14px;
+      max-width: 100%;
+    }
+
+    .footer {
+      margin-top: 10px;
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    .footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="shell">
+    <div class="header">
+      <div class="title-block">
+        <div class="brand">Landifornia Radio</div>
+        <div class="tagline">Yacht Rock & Soft Rock from the Landes</div>
+      </div>
+      <div class="badge">Live</div>
+    </div>
+
+    <div class="rcast-wrapper">
+      <!-- 👉 ICI : ton widget RCast, inchangé -->
+      <!-- RCAST.NET - START EMBEDDED PLAYER -->
+      <iframe
+        width="300"
+        height="428"
+        src="https://players.rcast.net/circle/69531"
+        frameborder="0"
+        scrolling="no"
+        allow="autoplay">
+      </iframe>
+      <!-- RCAST.NET - END EMBEDDED PLAYER -->
+    </div>
+
+    <div class="footer">
+      Player externe Landifornia Radio.<br>
+      Fermez cet onglet pour revenir au site ou à l'application.
+    </div>
+  </div>
+
+</body>
+</html>
